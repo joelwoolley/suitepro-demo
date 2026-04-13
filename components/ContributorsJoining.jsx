@@ -6,9 +6,8 @@ import { formatCurrency } from '../data/verticals'
 import PageContainer from './PageContainer'
 import ProgressArc from './ProgressArc'
 import CartCard from './CartCard'
-import StickyProceedButton from './StickyProceedButton'
 
-export default function ContributorsJoining({ vertical, squadName, anchorAmount, length, onAdvance, onRestart }) {
+export default function ContributorsJoining({ vertical, squadName, anchorAmount, length, onRestart }) {
   const [joined, setJoined] = useState([{ ...vertical.contributors[0], amount: anchorAmount }])
   const [isComplete, setIsComplete] = useState(false)
   const [showResult, setShowResult] = useState(false)
@@ -177,17 +176,6 @@ export default function ContributorsJoining({ vertical, squadName, anchorAmount,
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={showResult ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        style={{ marginTop: '1.5rem' }}
-      >
-        <StickyProceedButton onClick={onAdvance} visible={showResult}>
-          Want this for your suites?
-          <svg className="feather"><use href="/suitepro-demo/feather-sprite.svg#arrow-right" /></svg>
-        </StickyProceedButton>
-      </motion.div>
     </PageContainer>
   )
 }

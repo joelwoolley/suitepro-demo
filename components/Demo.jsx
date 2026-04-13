@@ -7,14 +7,11 @@ import MerchantCheckout from './MerchantCheckout'
 import AnchorContribute from './AnchorContribute'
 import SquadSummary from './SquadSummary'
 import ContributorsJoining from './ContributorsJoining'
-import SquadComplete from './SquadComplete'
-
 // Steps:
 // 1 - Merchant checkout (SuitePro branded)
 // 2 - Anchor contribute (setup + payment)
 // 3 - Squad summary + share
 // 4 - Contributors joining (animated)
-// 5 - Squad complete + CTA
 
 export default function Demo() {
   const [step, setStep] = useState(1)
@@ -73,14 +70,6 @@ export default function Demo() {
             {...commonProps}
             anchorAmount={anchorData?.anchorAmount ?? vertical.contributors[0].amount}
             length={anchorData?.length ?? vertical.duration}
-            onAdvance={advance}
-          />
-        )}
-        {step === 5 && (
-          <SquadComplete
-            {...commonProps}
-            anchorAmount={anchorData?.anchorAmount ?? vertical.contributors[0].amount}
-            onRestart={restart}
           />
         )}
       </motion.div>

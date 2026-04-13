@@ -1,6 +1,6 @@
 'use client'
 
-export default function Navbar({ merchantLogoText, onRestart, showGetStarted = false }) {
+export default function Navbar({ merchantLogoText, onRestart }) {
   return (
     <nav style={{ background: '#111', borderBottom: '1px solid #222' }}>
       <div style={{ maxWidth: 640, margin: '0 auto', padding: '0.75rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -16,33 +16,12 @@ export default function Navbar({ merchantLogoText, onRestart, showGetStarted = f
             </>
           )}
         </div>
-        {showGetStarted ? (
-          <a
-            href="https://www.paysquad.co/get-started"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              background: 'var(--gradient-btn)',
-              color: 'white',
-              borderRadius: 'var(--radius-btn)',
-              padding: '0.4rem 0.9rem',
-              fontWeight: 700,
-              fontSize: '0.85rem',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-            }}
-          >
-            Add Paysquad to your suites
-          </a>
-        ) : (
-          <button
-            onClick={onRestart}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6c757d', fontSize: '0.85rem' }}
-          >
-            Start over
-          </button>
-        )}
+        <button
+          onClick={onRestart}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6c757d', fontSize: '0.85rem' }}
+        >
+          Start over
+        </button>
       </div>
     </nav>
   )

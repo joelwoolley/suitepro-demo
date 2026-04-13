@@ -1,7 +1,7 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-export default function PageContainer({ children, merchantLogoText, showBanner = true, onRestart, large = false, plain = false, showGetStarted = false }) {
+export default function PageContainer({ children, merchantLogoText, showBanner = true, onRestart, large = false, plain = false }) {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: plain ? '#111' : '#0d0d0d' }}>
       {/* Merchant framing banner */}
