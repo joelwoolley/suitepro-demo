@@ -11,7 +11,7 @@ export default function PageContainer({ children, merchantLogoText, showBanner =
         </div>
       )}
 
-      <Navbar merchantLogoText={merchantLogoText} onRestart={onRestart} showGetStarted={showGetStarted} />
+      <Navbar merchantLogoText={merchantLogoText} onRestart={onRestart} />
 
       <main style={{ flex: 1, padding: '1.25rem', maxWidth: large ? 900 : 540, margin: '0 auto', width: '100%' }}>
         {children}

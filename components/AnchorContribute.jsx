@@ -209,10 +209,6 @@ export default function AnchorContribute({ vertical, onAdvance, squadName, setSq
             ))}
           </div>
         </div>
-
-        <button className="btn btn-muted" style={{ marginTop: '1.25rem' }} onClick={onRestart}>
-          Return to checkout
-        </button>
       </div>
     </PageContainer>
   )
